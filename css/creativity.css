@@ -1,0 +1,388 @@
+/* Стили для страницы творчества */
+.creativity-hero {
+    background: linear-gradient(135deg, rgba(62, 39, 35, 0.95), rgba(44, 29, 26, 0.98));
+}
+
+.creativity-hero .hero-subtitle {
+    color: var(--light-gold);
+}
+
+.creativity-hero .hero-years {
+    color: var(--gold);
+    font-style: italic;
+}
+
+/* Основное содержание творчества */
+.period-section {
+    padding: 60px 0;
+    border-bottom: 1px solid var(--light-gold);
+}
+
+.period-section:last-child {
+    border-bottom: none;
+}
+
+.section-header {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.section-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--gold);
+    opacity: 0.1;
+    position: absolute;
+    top: -2rem;
+    left: -1rem;
+    z-index: 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--sepia);
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.section-subtitle {
+    font-size: 1.3rem;
+    color: var(--gold);
+    font-style: italic;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.section-image {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.section-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.section-image:hover img {
+    transform: scale(1.05);
+}
+
+.image-caption {
+    padding: 1rem;
+    background: var(--light-gold);
+    color: var(--dark-brown);
+    font-size: 0.9rem;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Описание периода */
+.period-description p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--dark-brown);
+    margin-bottom: 2rem;
+}
+
+.key-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(201, 169, 110, 0.05);
+    border-radius: 10px;
+    border-left: 3px solid var(--gold);
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateX(10px);
+    background: rgba(201, 169, 110, 0.1);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    background: var(--gold);
+    color: var(--parchment);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover .feature-icon {
+    transform: scale(1.1);
+}
+
+.feature div {
+    flex: 1;
+}
+
+.feature strong {
+    color: var(--sepia);
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 1.1rem;
+}
+
+.feature p {
+    color: var(--dark-brown);
+    opacity: 0.8;
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Ключевые произведения */
+.key-works {
+    margin-top: 2rem;
+}
+
+.key-works h4 {
+    color: var(--sepia);
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.works-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.work-item {
+    padding: 1.5rem;
+    background: var(--parchment);
+    border-radius: 8px;
+    border: 1px solid var(--light-gold);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.work-year {
+    background: var(--gold);
+    color: var(--parchment);
+    padding: 0.3rem 1rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    display: inline-block;
+}
+
+.work-item h5 {
+    color: var(--sepia);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.work-item p {
+    color: var(--dark-brown);
+    opacity: 0.8;
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Эволюция стиля */
+.evolution-section {
+    background: linear-gradient(135deg, rgba(201, 169, 110, 0.05), rgba(62, 39, 35, 0.03));
+    border-radius: 20px;
+}
+
+.evolution-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.evolution-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--gold);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.timeline-year {
+    background: var(--gold);
+    color: var(--parchment);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    z-index: 2;
+    min-width: 120px;
+    text-align: center;
+}
+
+.timeline-content {
+    flex: 1;
+    padding: 2rem;
+    background: var(--parchment);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    margin: 0 2rem;
+    border: 1px solid var(--light-gold);
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover .timeline-content {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-content h4 {
+    color: var(--sepia);
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.timeline-content p {
+    color: var(--dark-brown);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Темы творчества */
+.theme-card {
+    background: var(--parchment);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    border: 1px solid var(--light-gold);
+}
+
+.theme-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.theme-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.theme-card h4 {
+    color: var(--sepia);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.theme-card p {
+    color: var(--dark-brown);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .period-section {
+        padding: 40px 0;
+    }
+    
+    .section-number {
+        font-size: 3.5rem;
+        top: -1rem;
+        left: 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .key-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .feature {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .evolution-timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item {
+        flex-direction: row !important;
+        align-items: flex-start;
+    }
+    
+    .timeline-year {
+        min-width: 80px;
+        font-size: 1rem;
+        padding: 0.6rem 1rem;
+    }
+    
+    .timeline-content {
+        margin-left: 1rem;
+        margin-right: 0;
+    }
+    
+    .section-image {
+        margin-top: 2rem;
+    }
+    
+    .section-image img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-item {
+        flex-direction: column !important;
+        text-align: center;
+    }
+    
+    .timeline-year {
+        margin-bottom: 1rem;
+    }
+    
+    .timeline-content {
+        margin: 0;
+    }
+}

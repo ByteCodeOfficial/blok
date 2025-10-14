@@ -1,0 +1,217 @@
+/* Стили для страницы медиагалереи */
+.page-header {
+    background: linear-gradient(135deg, rgba(62, 39, 35, 0.9), rgba(44, 29, 26, 0.95));
+    color: var(--parchment);
+}
+
+/* Видео галерея */
+.media-card {
+    background: var(--parchment);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.media-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.media-video {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.media-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.media-video:hover .play-overlay {
+    opacity: 1;
+}
+
+.play-button {
+    width: 60px;
+    height: 60px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--parchment);
+    font-size: 1.5rem;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.media-video:hover .play-button {
+    transform: scale(1);
+}
+
+.media-content {
+    padding: 1.5rem;
+}
+
+.media-content h4 {
+    color: var(--sepia);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.media-description {
+    color: var(--dark-brown);
+    opacity: 0.8;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.media-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+
+.duration {
+    background: rgba(201, 169, 110, 0.2);
+    color: var(--sepia);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+}
+
+.category {
+    color: var(--dark-brown);
+    opacity: 0.7;
+}
+
+/* Аудио галерея */
+.audio-card {
+    background: var(--parchment);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.audio-card:hover {
+    transform: translateY(-5px);
+}
+
+.audio-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.audio-card h5 {
+    color: var(--sepia);
+    margin-bottom: 0.5rem;
+}
+
+.audio-card p {
+    color: var(--dark-brown);
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
+}
+
+.audio-player {
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.audio-player::-webkit-media-controls-panel {
+    background: var(--light-gold);
+}
+
+/* Фотогалерея */
+.photo-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.photo-card:hover {
+    transform: scale(1.05);
+}
+
+.photo-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.photo-card:hover .photo-img {
+    transform: scale(1.1);
+}
+
+.photo-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: var(--parchment);
+    padding: 1.5rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.photo-card:hover .photo-caption {
+    transform: translateY(0);
+}
+
+.photo-caption h5 {
+    color: var(--gold);
+    margin-bottom: 0.3rem;
+}
+
+.photo-caption p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .media-video {
+        height: 200px;
+    }
+    
+    .audio-card {
+        padding: 1.5rem;
+    }
+    
+    .photo-img {
+        height: 250px;
+    }
+}
+
+/* Стиль для активной навигации */
+.literary-nav .nav-link.active {
+    color: var(--gold);
+    font-weight: 600;
+}

@@ -1,0 +1,207 @@
+/* Стили для страницы интересных фактов */
+.facts-hero {
+    background: linear-gradient(135deg, rgba(62, 39, 35, 0.95), rgba(44, 29, 26, 0.98));
+}
+
+.facts-hero .hero-subtitle {
+    color: var(--light-gold);
+}
+
+.facts-hero .hero-years {
+    color: var(--gold);
+    font-style: italic;
+}
+
+/* Основное содержание фактов */
+.fact-section {
+    padding: 60px 0;
+    border-bottom: 1px solid var(--light-gold);
+}
+
+.fact-section:last-child {
+    border-bottom: none;
+}
+
+.section-header {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.section-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--gold);
+    opacity: 0.1;
+    position: absolute;
+    top: -2rem;
+    left: -1rem;
+    z-index: 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--sepia);
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.section-content {
+    margin-bottom: 2rem;
+}
+
+.fact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background: rgba(201, 169, 110, 0.05);
+    border-radius: 12px;
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.fact-item:hover {
+    border-left-color: var(--gold);
+    background: rgba(201, 169, 110, 0.1);
+    transform: translateX(10px);
+}
+
+.fact-icon {
+    font-size: 2rem;
+    background: var(--gold);
+    color: var(--parchment);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.fact-item:hover .fact-icon {
+    transform: scale(1.1);
+}
+
+.fact-text h4 {
+    color: var(--sepia);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.fact-text p {
+    color: var(--dark-brown);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.section-image {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.section-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.section-image:hover img {
+    transform: scale(1.05);
+}
+
+.image-caption {
+    padding: 1rem;
+    background: var(--light-gold);
+    color: var(--dark-brown);
+    font-size: 0.9rem;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Секция с цифрами */
+.numbers-section {
+    background: linear-gradient(135deg, rgba(201, 169, 110, 0.05), rgba(62, 39, 35, 0.03));
+    border-radius: 20px;
+}
+
+.number-card {
+    text-align: center;
+    padding: 2rem;
+    background: var(--parchment);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    border: 1px solid var(--light-gold);
+}
+
+.number-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+}
+
+.number-label {
+    color: var(--sepia);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .fact-section {
+        padding: 40px 0;
+    }
+    
+    .section-number {
+        font-size: 3.5rem;
+        top: -1rem;
+        left: 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .fact-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding: 1.5rem 1rem;
+    }
+    
+    .fact-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    
+    .section-image {
+        margin-top: 2rem;
+    }
+    
+    .section-image img {
+        height: 250px;
+    }
+    
+    .number {
+        font-size: 2.5rem;
+    }
+    
+    .number-card {
+        padding: 1.5rem;
+    }
+}
